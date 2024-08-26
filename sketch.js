@@ -13,8 +13,8 @@ function setup() {
         ellipse(this.x, this.y, this.size);
       },
       move: function () {
-        let dirX = 0.002;
-        let dirY = 0.001;
+        let dirX = 0.006;
+        let dirY = 0.004;
 
         let nX = noise(this.x * dirX, this.y * dirY) * 6 - 3;
         let nY = noise(this.y * dirX, this.y * dirY) * 6 - 3;
