@@ -16,11 +16,6 @@ function mouseDragged() {
 
 }
 
-function mousePressed() {
-  balls.length = 0;
-  background(11);
-}
-
 function draw() {
   // background(11);
   ellipseMode(CENTER);
@@ -87,10 +82,9 @@ function Ball(x, y) {
       bN = noise(this.x * blue, this.y * blue) * 260;
       Sz = noise(this.x * nsz, this.y * nsz) * 30;
 
-
       fill(rN, gN, bN, 90);
       strokeWeight(1);
-      stroke(0, 0, 0, 10);
+      stroke(0, 0, 0, 50);
       ellipse(this.x, this.y, Sz);
     },
     this.move = function () {
