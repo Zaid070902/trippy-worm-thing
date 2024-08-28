@@ -15,7 +15,7 @@ function Ball(x, y) {
       bN = noise(this.x * blue, this.y * blue) * 260;
       Sz = noise(this.x * nsz, this.y * nsz) * 30;
 
-      fill(rN, gN, bN, 90);
+      fill(rN, gN, bN, 200);
       strokeWeight(1);
       stroke(0, 0, 0, 50);
       ellipse(this.x, this.y, Sz);
