@@ -9,7 +9,6 @@ function setup() {
 
 function mouseDragged() {
   balls.push(new Ball(mouseX, mouseY));
-
 }
 
 function draw() {
@@ -89,11 +88,11 @@ function Ball(x, y) {
       ellipse(this.x, this.y, Sz);
     },
     this.move = function () {
-      let dirX = 0.05;
-      let dirY = 0.03;
+      let dirX = 0.07;
+      let dirY = 0.09;
 
-      let nX = noise(this.x * dirX, this.y * dirY) * 6 - 3;
-      let nY = noise(this.y * dirX, this.y * dirY) * 6 - 3;
+      let nX = noise(this.x * dirX, this.y * dirY) * 2 - 1;
+      let nY = noise(this.y * dirX, this.y * dirY) * 3 - 1.5;
 
       constrain(this.x += nX, 0, width - 50);
       constrain(this.y += nY, 0, height - 50);
