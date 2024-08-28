@@ -5,10 +5,6 @@ let n, red, blue, green, rN, gN, bN, Sz;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(11);
-  red = 0.009;
-  green = 0.006;
-  blue = 0.007;
-  nsz = 0.01;
 }
 
 function mouseDragged() {
@@ -77,6 +73,11 @@ function Ball(x, y) {
   this.x = x,
     this.y = y,
     this.display = function () {
+      red = 0.007;
+      green = 0.003;
+      blue = 0.005;
+      nsz = 0.05;
+
       rN = noise(this.x * red, this.y * red) * 260;
       gN = noise(this.x * green, this.y * green) * 260;
       bN = noise(this.x * blue, this.y * blue) * 260;
