@@ -5,9 +5,9 @@ function Ball(x, y) {
   this.x = x,
     this.y = y,
     this.display = function () {
-      red = 0.007;
-      green = 0.003;
-      blue = 0.005;
+      red = 0.003;
+      green = 0.005;
+      blue = 0.001;
       nsz = 0.007;
 
       rN = noise(this.x * red, this.y * red) * 350;
@@ -16,7 +16,7 @@ function Ball(x, y) {
       Sz = noise(this.x * nsz, this.y * nsz) * 80;
 
       fill(rN, gN, bN, 200);
-      strokeWeight(1);
+      strokeWeight(2);
       stroke(rN - 80, gN - 80, bN - 80, 55);
       ellipse(this.x, this.y, Sz);
     },
