@@ -8,12 +8,12 @@ function Ball(x, y) {
       red = 0.007;
       green = 0.003;
       blue = 0.005;
-      nsz = 0.03;
+      nsz = 0.007;
 
       rN = noise(this.x * red, this.y * red) * 350;
       gN = noise(this.x * green, this.y * green) * 60;
       bN = noise(this.x * blue, this.y * blue) * 360;
-      Sz = noise(this.x * nsz, this.y * nsz) * 30;
+      Sz = noise(this.x * nsz, this.y * nsz) * 80;
 
       fill(rN, gN, bN, 200);
       strokeWeight(1);
