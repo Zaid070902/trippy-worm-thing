@@ -11,13 +11,15 @@ function mouseDragged() {
   balls.push(new Ball(mouseX + 30, mouseY - 30));
   balls.push(new Ball(mouseX - 30, mouseY + 30));
   balls.push(new Ball(mouseX + 30, mouseY + 30));
+}
 
 
-
+function mousePressed() {
+  background(11);
+  balls.length = 0;
 }
 
 function draw() {
-  // background(11);
   ellipseMode(CENTER);
   for (let i = 0; i < balls.length; i++) {
     balls[i].display();

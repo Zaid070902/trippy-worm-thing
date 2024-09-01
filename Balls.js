@@ -31,19 +31,3 @@ function Ball(x, y) {
       constrain(this.y += nY, 0, height - 50);
     }
 }
-
-function Dot(x, y) {
-
-  this.x = x,
-    this.y = y,
-    this.move = function () {
-      let dirX = 0.07;
-      let dirY = 0.09;
-
-      let nX = noise(this.x * dirX, this.y * dirY) * 6 - 3;
-      let nY = noise(this.y * dirX, this.y * dirY) * 3 - 1.5;
-
-      constrain(this.x += nX, 0, width - 50);
-      constrain(this.y += nY, 0, height - 50);
-    }
-}
