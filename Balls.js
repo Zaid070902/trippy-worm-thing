@@ -10,13 +10,13 @@ function Ball(x, y) {
       blue = 0.001;
       nsz = 0.007;
 
-      rN = noise(this.x * red, this.y * red) * 360;
-      gN = noise(this.x * green, this.y * green) * 360;
-      bN = noise(this.x * blue, this.y * blue) * 360;
+      rN = noise(this.x * red, this.y * red) * 460;
+      gN = noise(this.x * green, this.y * green) * 200;
+      bN = noise(this.x * blue, this.y * blue) * 460;
       Sz = noise(this.x * nsz, this.y * nsz) * 20;
 
       strokeWeight(5);
-      stroke(rN , gN, bN, 100);
+      stroke(rN , gN, bN, 50);
       line(this.x, this.y, this.x, this.y);
     },
     this.move = function () {
