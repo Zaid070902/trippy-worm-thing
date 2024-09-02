@@ -8,23 +8,23 @@ function Ball(x, y) {
       red = 0.003;
       green = 0.005;
       blue = 0.001;
-      nsz = 0.007;
+      nsz = 0.03;
 
       rN = noise(this.x * red, this.y * red) * 460;
-      gN = noise(this.x * green, this.y * green) *200;
+      gN = noise(this.x * green, this.y * green) * 200;
       bN = noise(this.x * blue, this.y * blue) * 400;
-      Sz = noise(this.x * nsz, this.y * nsz) * 20;
+      Sz = noise(this.x * nsz, this.y * nsz) * 15;
 
-      strokeWeight(5);
-      stroke(rN , gN, bN, 100);
+      strokeWeight(Sz);
+      stroke(rN, gN, bN, 100);
       line(this.x, this.y, this.x, this.y);
     },
     this.move = function () {
-      let dirX = 0.01;
-      let dirY = 0.02;
+      let dirX = 0.05;
+      let dirY = 0.04;
 
-      let nX = noise(this.x * dirX, this.y * dirY) * 8 - 4;
-      let nY = noise(this.y * dirX, this.y * dirY) * 4 - 2;
+      let nX = noise(this.x * dirX, this.y * dirY) * 10 - 5;
+      let nY = noise(this.y * dirX, this.y * dirY) * 5 - 3.5;
 
       this.x = constrain(this.x += nX, 0, width);
       this.y = constrain(this.y += nY, 0, height);
