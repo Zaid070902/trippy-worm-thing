@@ -5,20 +5,21 @@ function Ball(x, y) {
   this.x = x,
     this.y = y,
     this.display = function () {
-      red = 0.03;
+      red = 0.003;
       green = 0.005;
-      blue = 0.01;
+      blue = 0.001;
       nsz = 0.007;
 
       rN = noise(this.x * red, this.y * red) * 460;
-      gN = noise(this.x * green, this.y * green) * 250;
+      gN = noise(this.x * green, this.y * green) * 460;
       bN = noise(this.x * blue, this.y * blue) * 460;
       Sz = noise(this.x * nsz, this.y * nsz) * 20;
 
       fill(rN, gN, bN, 200);
-      strokeWeight(2);
+      strokeWeight(10);
       stroke(rN - 150, gN - 150, bN - 150, 100);
-      ellipse(this.x, this.y, Sz);
+      // ellipse(this.x, this.y, Sz);
+      line(this.x, this.y, this.x, this.y);
     },
     this.move = function () {
       let dirX = 0.01;
