@@ -13,7 +13,6 @@ function mouseDragged() {
   balls.push(new Ball(mouseX + 30, mouseY + 30));
 }
 
-
 function mousePressed() {
   background(11);
   balls.length = 0;

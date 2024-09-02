@@ -5,13 +5,13 @@ function Ball(x, y) {
   this.x = x,
     this.y = y,
     this.display = function () {
-      red = 0.003;
+      red = 0.03;
       green = 0.005;
-      blue = 0.001;
+      blue = 0.01;
       nsz = 0.007;
 
       rN = noise(this.x * red, this.y * red) * 460;
-      gN = noise(this.x * green, this.y * green) * 200;
+      gN = noise(this.x * green, this.y * green) * 250;
       bN = noise(this.x * blue, this.y * blue) * 460;
       Sz = noise(this.x * nsz, this.y * nsz) * 20;
 
@@ -21,13 +21,13 @@ function Ball(x, y) {
       ellipse(this.x, this.y, Sz);
     },
     this.move = function () {
-      let dirX = 0.02;
-      let dirY = 0.04;
+      let dirX = 0.01;
+      let dirY = 0.02;
 
-      let nX = noise(this.x * dirX, this.y * dirY) * 6 - 3;
-      let nY = noise(this.y * dirX, this.y * dirY) * 3 - 1.5;
+      let nX = noise(this.x * dirX, this.y * dirY) * 8 - 4;
+      let nY = noise(this.y * dirX, this.y * dirY) * 4 - 2;
 
-      constrain(this.x += nX, 0, width - 50);
-      constrain(this.y += nY, 0, height - 50);
+      this.x = constrain(this.x += nX, 0, width);
+      this.y = constrain(this.y += nY, 0, height);
     }
 }
