@@ -6,10 +6,10 @@ function setup() {
 }
 
 function mouseDragged() {
-  balls.push(new Ball(mouseX - random(60), mouseY - random(60)));
-  balls.push(new Ball(mouseX - random(60), mouseY - random(60)));
-  balls.push(new Ball(mouseX + random(60), mouseY + random(60)));
-  balls.push(new Ball(mouseX + random(60), mouseY + random(60)));
+  for (let i = 0; i < 5; i++) {
+    balls.push(new Ball(mouseX - random(60), mouseY - random(60)));
+
+  }
 }
 
 function mousePressed() {
