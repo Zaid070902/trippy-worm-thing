@@ -6,11 +6,10 @@ function setup() {
 }
 
 function mouseDragged() {
-  balls.push(new Ball(mouseX - random(50), mouseY - random(50)));
-  balls.push(new Ball(mouseX - random(50), mouseY - random(50)));
-  balls.push(new Ball(mouseX + random(50), mouseY + random(50)));
-  balls.push(new Ball(mouseX + random(50), mouseY + random(50)));
-
+  balls.push(new Ball(mouseX - random(60), mouseY - random(60)));
+  balls.push(new Ball(mouseX - random(60), mouseY - random(60)));
+  balls.push(new Ball(mouseX + random(60), mouseY + random(60)));
+  balls.push(new Ball(mouseX + random(60), mouseY + random(60)));
 }
 
 function mousePressed() {
@@ -19,7 +18,6 @@ function mousePressed() {
 }
 
 function draw() {
-  ellipseMode(CENTER);
   for (let i = 0; i < balls.length; i++) {
     balls[i].display();
     balls[i].move();

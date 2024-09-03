@@ -17,8 +17,9 @@ function Ball(x, y) {
 
       strokeWeight(Sz);
       stroke(rN, gN, bN, Sz);
-      line(this.x, this.y, this.x, this.y);
+      point(this.x, this.y,);
     },
+
     this.move = function () {
       let dirX = 0.05;
       let dirY = 0.04;
