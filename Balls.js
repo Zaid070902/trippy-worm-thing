@@ -11,7 +11,7 @@ function Ball(x, y) {
       nsz = 0.03;
 
       rN = noise(this.x * red, this.y * red) * 400;
-      gN = noise(this.x * green, this.y * green) * 300;
+      gN = noise(this.x * green, this.y * green) * 200;
       bN = noise(this.x * blue, this.y * blue) * 500;
       Sz = noise(this.x * nsz, this.y * nsz) * 15;
 
