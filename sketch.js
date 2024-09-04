@@ -1,21 +1,25 @@
 let balls = [];
+let VSpacing = 5;
+let HSpacing = 5;
+
+let numdots = 200;
+let r = 100;
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(11);
 }
 
-function mouseDragged() {
-  for (let i = 0; i < 5; i++) {
-    balls.push(new Ball(mouseX - random(60), mouseY - random(60)));
-
-  }
-}
-
 function mousePressed() {
-  background(11);
-  balls.length = 0;
-}
+  for (let i = 0; i < 50; i++) {
+    balls.push(new Ball(mouseX, mouseY + i * VSpacing));
+    for (let j = 0; j < 5; j++) {
+      balls.push(new Ball(mouseX + j * HSpacing, mouseY + i * VSpacing));
+    }
+  };
+
+};
 
 function draw() {
   for (let i = 0; i < balls.length; i++) {
