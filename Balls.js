@@ -5,9 +5,9 @@ function Ball(x, y) {
   this.x = x,
     this.y = y,
     this.display = function () {
-      red = 0.003;
-      green = 0.005;
-      blue = 0.001;
+      red = 0.005;
+      green = 0.009;
+      blue = 0.005;
       nsz = 0.03;
 
       rN = noise(this.x * red, this.y * red) * 400;
