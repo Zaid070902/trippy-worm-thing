@@ -1,10 +1,6 @@
 let balls = [];
-let VSpacing = 5;
-let HSpacing = 5;
-
-let numdots = 200;
-let r = 100;
-
+let VSpacing = 3;
+let HSpacing = 3;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
