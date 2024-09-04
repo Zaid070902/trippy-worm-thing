@@ -5,13 +5,13 @@ function Ball(x, y) {
   this.x = x,
     this.y = y,
     this.display = function () {
-      red = 0.005;
-      green = 0.009;
-      blue = 0.005;
+      red = 0.001;
+      green = 0.005;
+      blue = 0.002;
       nsz = 0.03;
 
       rN = noise(this.x * red, this.y * red) * 400;
-      gN = noise(this.x * green, this.y * green) * 200;
+      gN = noise(this.x * green, this.y * green) * 300;
       bN = noise(this.x * blue, this.y * blue) * 500;
       Sz = noise(this.x * nsz, this.y * nsz) * 15;
 
