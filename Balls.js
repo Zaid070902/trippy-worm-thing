@@ -16,7 +16,7 @@ function Ball(x, y) {
     Sz = noise(this.x * nsz, this.y * nsz) * 5;
 
     strokeWeight(Sz);
-    stroke(rN + 100, gN - 100, bN, 5);
+    stroke(rN + 100, gN - 100, bN, Sz);
     point(this.x, this.y);
   };
 
