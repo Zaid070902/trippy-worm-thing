@@ -5,7 +5,7 @@ let scale = 30;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(30);
-  frameRate(30);
+  // frameRate(30);
 }
 
 function mousePressed() {
